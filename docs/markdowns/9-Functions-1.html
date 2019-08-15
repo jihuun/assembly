@@ -1,0 +1,877 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9. Functions-1 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10-Functions-2-The-stack.html" />
+    
+    
+    <link rel="prev" href="8-Arrays-and-structures.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Learning Assembly Language with ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1-Introduction.html">
+            
+                <a href="1-Introduction.html">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2-Registers-and-Basic-arithmetic.html">
+            
+                <a href="2-Registers-and-Basic-arithmetic.html">
+            
+                    
+                    2. Registers and Basic arithmetic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="3-Memory-addreses-Load-and-store.html">
+            
+                <a href="3-Memory-addreses-Load-and-store.html">
+            
+                    
+                    3. Memory, addreses, Load and store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="4-GDB.html">
+            
+                <a href="4-GDB.html">
+            
+                    
+                    4. GDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="5-Branches.html">
+            
+                <a href="5-Branches.html">
+            
+                    
+                    5. Branches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="6-Control-Structures.html">
+            
+                <a href="6-Control-Structures.html">
+            
+                    
+                    6. Control Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="7-Indexing-modes.html">
+            
+                <a href="7-Indexing-modes.html">
+            
+                    
+                    7. Indexing modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="8-Arrays-and-structures.html">
+            
+                <a href="8-Arrays-and-structures.html">
+            
+                    
+                    8. Arrays and structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.9" data-path="9-Functions-1.html">
+            
+                <a href="9-Functions-1.html">
+            
+                    
+                    9. Functions-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10-Functions-2-The-stack.html">
+            
+                <a href="10-Functions-2-The-stack.html">
+            
+                    
+                    10. Functions-2 The stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11-Predication.html">
+            
+                <a href="11-Predication.html">
+            
+                    
+                    11. Predication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12-Loops-and-the-status-register.html">
+            
+                <a href="12-Loops-and-the-status-register.html">
+            
+                    
+                    12. Loops and the status register
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="13-Floating-point-numbers.html">
+            
+                <a href="13-Floating-point-numbers.html">
+            
+                    
+                    13. Floating point numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="14-Matrix-multiply.html">
+            
+                <a href="14-Matrix-multiply.html">
+            
+                    
+                    14. Matrix multiply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="15-Integer-division.html">
+            
+                <a href="15-Integer-division.html">
+            
+                    
+                    15. Integer division
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="16-Switch-control-structure.html">
+            
+                <a href="16-Switch-control-structure.html">
+            
+                    
+                    16. Switch control structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="17-Passing-data-to-functions.html">
+            
+                <a href="17-Passing-data-to-functions.html">
+            
+                    
+                    17. Passing data to functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="18-Local-data-and-the-frame-pointer.html">
+            
+                <a href="18-Local-data-and-the-frame-pointer.html">
+            
+                    
+                    18. Local data and the frame pointer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="19-System-calls.html">
+            
+                <a href="19-System-calls.html">
+            
+                    
+                    19. System calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="20-Indirect-calls.html">
+            
+                <a href="20-Indirect-calls.html">
+            
+                    
+                    20. Indirect calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21" data-path="21-Subword-data.html">
+            
+                <a href="21-Subword-data.html">
+            
+                    
+                    21. Subword data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="22-The-Thumb-instruction-set.html">
+            
+                <a href="22-The-Thumb-instruction-set.html">
+            
+                    
+                    22. The Thumb instruction set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="23-Nested-functions.html">
+            
+                <a href="23-Nested-functions.html">
+            
+                    
+                    23. Nested functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="24-Trampolines.html">
+            
+                <a href="24-Trampolines.html">
+            
+                    
+                    24. Trampolines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="25-Integer-SIMD.html">
+            
+                <a href="25-Integer-SIMD.html">
+            
+                    
+                    25. Integer SIMD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.26" data-path="26-A-primer-about-linking.html">
+            
+                <a href="26-A-primer-about-linking.html">
+            
+                    
+                    26. A primer about linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.27" data-path="27-dynamic-linking.html">
+            
+                <a href="27-dynamic-linking.html">
+            
+                    
+                    27. dynamic-linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="appendix.html">
+            
+                <a href="appendix.html">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >9. Functions-1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="9-functions-1">9. Functions-1</h1>
+<hr>
+<h2 id="aapcs-&#xC694;&#xC57D;-arm-procedure-call-standard">AAPCS &#xC694;&#xC57D; (ARM Procedure Call Standard)</h2>
+<ul>
+<li><p>SP register<br>Stack is an area of memory owned only by the current function.  </p>
+</li>
+<li><p>Parameters<br>4&#xAC1C;&#xC758; &#xD30C;&#xB77C;&#xBBF8;&#xD130; &#xAE4C;&#xC9C0;&#xB9CC; r0 ~ r3&#xC5D0; &#xC800;&#xC7A5;&#xB418;&#xACE0; &#xB098;&#xBA38;&#xC9C0;&#xB294; stack&#xC5D0; push &#xB428;  </p>
+</li>
+<li><p>AAPCS &#xADDC;&#xCE59;  </p>
+<ul>
+<li>&#xD568;&#xC218; &#xC9C4;&#xC785;&#xC2DC;&#xC5D0;&#xB294; cpsr &#xC0C1;&#xD0DC;&#xB97C; &#xBAA8;&#xB978;&#xB2E4;. &#xC608;&#xCE21;/&#xAC00;&#xC815; &#xD558;&#xBA74;&#xC548;&#xB428;.  </li>
+<li>&#xD568;&#xC218;&#xC5D0;&#xC11C; r0 ~ r3 &#xB97C; &#xC790;&#xC720;&#xC790;&#xC7AC;&#xB85C; &#xBCC0;&#xACBD; &#xAC00;&#xB2A5;  </li>
+<li>r4 ~ r11 &#xC740; &#xC218;&#xC815;&#xAC00;&#xB2A5; &#xD558;&#xC9C0;&#xB9CC; &#xD568;&#xC218;&#xAC00; &#xC885;&#xB8CC;&#xB418;&#xC5C8;&#xC744; &#xB54C; &#xBCF5;&#xAD6C; &#xB418;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.   </li>
+</ul>
+</li>
+<li><p>&#xD568;&#xC218; &#xD638;&#xCD9C;<br>&#xC9C1;&#xC811; &#xD638;&#xCD9C;: &#xD568;&#xC218; &#xC704;&#xCE58;&#xB97C; &#xC54C; &#xACBD;&#xC6B0; <code>bl label</code> &#xC0AC;&#xC6A9;<br>&#xAC04;&#xC811;&#xD638;&#xCD9C;: &#xD568;&#xC218;&#xC758; &#xC8FC;&#xC18C;&#xB97C; register&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xACE0; <code>blx Rsource1</code> &#xC0AC;&#xC6A9;  </p>
+</li>
+<li><p>&#xD568;&#xC218; Exit<br><code>lr</code> &#xC758; &#xCD08;&#xAE30;&#xAC12;&#xC744; &#xAC04;&#xC9C1;&#xD558;&#xACE0; &#xC788;&#xB2E4;&#xAC00; &#xD568;&#xC218; &#xC885;&#xB8CC;&#xC804;&#xC5D0; &#xB2E4;&#xC2DC; &#xBD88;&#xB7EC;&#xB4E4;&#xC5EC;&#xC57C;&#xD568;. <code>lr</code>&#xC5D0; &#xC800;&#xC7A5;&#xAC00;&#xB2A5;<br>&#xADF8;&#xB9AC;&#xACE0; <code>bx Rsource1</code> &#xD568;  </p>
+</li>
+<li><p>Returning data<br><code>r0</code> &#xC774;&#xC6A9;  </p>
+</li>
+<li><p>(&#xCC38;&#xACE0;) <code>fp</code>(r11) &#xC774;&#xB780;?
+&quot;Stack Frame&quot; This register is used to keep the stack frame (also called the stack base or base pointer).<br>What is the stack frame?<br>The stack frame is just a register that keeps the value that sp got at the beginning.<br>PC&#xC5D0;&#xC11C; arm-linux-*-gcc&#xB85C; &#xD06C;&#xB85C;&#xC2A4; &#xCEF4;&#xD30C;&#xC77C;&#xD558;&#xBA74; &#xB9CE;&#xC774; &#xBCF4;&#xC784;. AAPCS&#xC5D0;&#xB294; &#xC5C6;&#xACE0; GCC&#xAC00; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xADDC;&#xC57D;.  </p>
+</li>
+</ul>
+<h2 id="hello-world">Hello world</h2>
+<pre><code class="lang-asm">/* -- hello01.s */  
+.data  
+
+greeting:  
+.asciz &quot;Hello world&quot;        /* .asciz &#xB610;&#xB294; .ascii: GNU&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xC9C0;&#xC2DC;&#xC790;.  
+                 * &#xBB38;&#xC790;&#xC5F4; &#xC6A9;. string + \0  
+                 */  
+.balign 4  
+return: .word 0  
+
+.text  
+
+.global main  
+main:  
+    ldr r1, address_of_return     /*   r1 &#x2190;  &amp;address_of_return */  
+    str lr, [r1]                  /*   *r1 &#x2190; lr */  
+
+    ldr r0, address_of_greeting   /* r0 &#x2190; &amp;address_of_greeting */  
+                                  /* First parameter of puts */  
+
+    bl puts                       /* Call to puts */  
+                                  /* lr &#x2190; address of next instruction */  
+
+    ldr r1, address_of_return     /* r1 &#x2190; &amp;address_of_return */  
+    ldr lr, [r1]                  /* lr &#x2190; *r1 */  
+    bx lr                         /* return from main */  
+address_of_greeting: .word greeting  
+address_of_return: .word return  
+
+/* External */  
+.global puts
+</code></pre>
+<pre><code>    ldr r1, address_of_return     /*   r1 &#x2190;  &amp;address_of_return */  
+    str lr, [r1]                  /*   *r1 &#x2190; lr */
+</code></pre><blockquote>
+<p>main &#xD568;&#xC218; &#xC9C4;&#xC785;&#xC804;&#xC758; <code>lr</code> &#xAC12;&#xC744; &#xC800;&#xC7A5;(&#xBCF4;&#xC874;)&#xD574;&#xC57C;&#xD568;. main &#xD568;&#xC218;&#xAC00; &#xC885;&#xB8CC;&#xB420; &#xB54C; &#xB418;&#xB3CC;&#xC544;&#xAC08; &#xC8FC;&#xC18C;.<br>&#xD568;&#xC218; &#xC9C4;&#xC785; &#xC9C1;&#xD6C4;&#xC5D0;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; &#xD604; &#xD568;&#xC218;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; registor&#xB97C; &#xB2E4;&#xB978;&#xACF3;&#xC5D0; &#xBCF4;&#xAD00;&#xD574; &#xB193;&#xC544;&#xC57C; &#xD55C;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xD568;&#xC218; &#xC885;&#xB8CC; &#xC9C1;&#xC804; &#xB2E4;&#xC2DC; &#xBCF5;&#xC6D0;&#xD55C;&#xB2E4;.<br>&#xC774; main &#xD568;&#xC218;&#xC5D0;&#xC11C; &#xB610;&#xB2E4;&#xB978; &#xD568;&#xC218; call&#xC774; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; lr&#xC774; &#xBCC0;&#xACBD;&#xB420; &#xAC83;&#xC774;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; lr&#xC744; &#xBBF8;&#xB9AC; preserve &#xD574; &#xB193;&#xB294;&#xAC83;&#xC774;&#xB2E4;.  </p>
+</blockquote>
+<pre><code class="lang-asm">    ldr r0, address_of_greeting   /* r0 &#x2190; &amp;address_of_greeting */
+</code></pre>
+<blockquote>
+<p>puts &#xC758; &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB97C; &#xC815;&#xC758;&#xD568;. r0 &#xAC00; &#xCCAB;&#xBC88;&#xC9F8; &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB85C; &#xC0AC;&#xC6A9;&#xB428;.  </p>
+</blockquote>
+<pre><code class="lang-asm">    bl puts                       /* Call to puts */
+</code></pre>
+<blockquote>
+<p><code>bl</code> &#xBA85;&#xB839;&#xC73C;&#xB85C; &#xC778;&#xD574; <code>lr</code> &#xB808;&#xC9C0;&#xC2A4;&#xD130;&#xAC00; puts&#xAC00; &#xBCF5;&#xADC0;&#xD560; &#xC8FC;&#xC18C;&#xB85C; overwrite &#xB420; &#xAC83;&#xC774;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xBBF8;&#xB9AC; <code>[r1]</code>&#xC5D0; main&#xD568;&#xC218;&#xC758; &#xBCF5;&#xADC0; &#xC8FC;&#xC18C;&#xB97C; &#xC800;&#xC7A5;&#xD55C;&#xAC83;.<br><code>bl</code> &#xBA85;&#xB839; &#xC0AC;&#xC6A9;&#xC2DC; &#xBCF5;&#xADC0;&#xC8FC;&#xC18C;&#xB97C; &#xC790;&#xB3D9;&#xC73C;&#xB85C; <code>lr</code>&#xC5D0; &#xC800;&#xC7A5; &#xD55C;&#xB2E4;.  </p>
+</blockquote>
+<pre><code class="lang-asm">    ldr r1, address_of_return     /* r1 &#x2190; &amp;address_of_return */  
+    ldr lr, [r1]                  /* lr &#x2190; *r1 */
+</code></pre>
+<blockquote>
+<p>main &#xD568;&#xC218;&#xC758; &#xBCF5;&#xADC0;&#xC8FC;&#xC18C;&#xB97C; &#xBCF5;&#xAD6C;.  </p>
+</blockquote>
+<h2 id="printf-scanf">printf() scanf()</h2>
+<pre><code class="lang-asm">/* -- printf01.s */  
+.data  
+
+/* First message */  
+.balign 4  
+message1: .asciz &quot;Hey, type a number: &quot;  
+
+/* Second message */  
+.balign 4  
+message2: .asciz &quot;I read the number %d\n&quot;  
+
+/* Format pattern for scanf */  
+.balign 4  
+scan_pattern : .asciz &quot;%d&quot;  
+
+/* Where scanf will store the number read */  
+.balign 4  
+number_read: .word 0  
+
+.balign 4  
+return: .word 0  
+
+.text  
+
+.global main  
+main:  
+    ldr r1, address_of_return        /* r1 &#x2190;  &amp;address_of_return */  
+    str lr, [r1]                     /* *r1 &#x2190;  lr */  
+
+    ldr r0, address_of_message1      /* r0 &#x2190;  &amp;message1 */  
+    bl printf                        /* call to printf */  
+
+    ldr r0, address_of_scan_pattern  /* r0 &#x2190;  &amp;scan_pattern */  
+    ldr r1, address_of_number_read   /* r1 &#x2190;  &amp;number_read */  
+    bl scanf                         /* call to scanf */  
+
+    ldr r0, address_of_message2      /* r0 &#x2190;  &amp;message2 */  
+    ldr r1, address_of_number_read   /* r1 &#x2190;  &amp;number_read */  
+    ldr r1, [r1]                     /* r1 &#x2190;  *r1 */  
+    bl printf                        /* call to printf */  
+
+    ldr r0, address_of_number_read   /* r0 &#x2190;  &amp;number_read */  
+    ldr r0, [r0]                     /* r0 &#x2190;  *r0 */  
+
+    ldr lr, address_of_return        /* lr &#x2190;  &amp;address_of_return */  
+    ldr lr, [lr]                     /* lr &#x2190;  *lr */  
+    bx lr                            /* return from main using lr */  
+address_of_message1 : .word message1  
+address_of_message2 : .word message2  
+address_of_scan_pattern : .word scan_pattern  
+address_of_number_read : .word number_read  
+address_of_return : .word return  
+
+/* External */  
+.global printf  
+.global scanf
+</code></pre>
+<pre><code class="lang-asm">    ldr r1, address_of_return        /* r1 &#x2190;  &amp;address_of_return */  
+    str lr, [r1]                     /* *r1 &#x2190;  lr */
+</code></pre>
+<blockquote>
+<p>&#xBCF5;&#xADC0;&#xC8FC;&#xC18C; lr &#xB530;&#xB85C; &#xC800;&#xC7A5;<br>&#xD568;&#xC218; &#xB0B4;&#xC5D0; &#xB2E4;&#xB978; subrutine call&#xC774; &#xC788;&#xB2E4;&#xBA74;, &#xD568;&#xC218; &#xC2DC;&#xC791;&#xC2DC; &#xBC18;&#xB4DC;&#xC2DC; &#xD544;&#xC694;.<br>&#xC774;&#xAC83;&#xC740; &#xC8FC;&#xC18C;&#xB97C; r1&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC544;&#xB2D8;, r1&#xC5D0; &quot;&#xC800;&#xC7A5;&#xB41C;&quot; &#xC8FC;&#xC18C;&#xC778; [r1] &#xC989;, address_of_return &#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xAC83; &#xC720;&#xC758;.  </p>
+</blockquote>
+<pre><code class="lang-asm">/* -- printf02.s */  
+.data  
+
+/* First message */  
+.balign 4  
+message1: .asciz &quot;Hey, type a number: &quot;  
+
+/* Second message */  
+.balign 4  
+message2: .asciz &quot;%d times 5 is %d\n&quot;  
+
+/* Format pattern for scanf */  
+.balign 4  
+scan_pattern : .asciz &quot;%d&quot;  
+
+/* Where scanf will store the number read */  
+.balign 4  
+number_read: .word 0  
+
+.balign 4  
+return: .word 0  
+
+.balign 4  
+return2: .word 0  
+
+.text  
+
+/*  
+mult_by_5 function  
+*/  
+mult_by_5:   
+    ldr r1, address_of_return2       /* r1 &#x2190;  &amp;address_of_return */  
+    str lr, [r1]                     /* *r1 &#x2190;  lr */  
+
+    add r0, r0, r0, LSL #2           /* r0 &#x2190;  r0 + 4*r0 */  
+
+    ldr lr, address_of_return2       /* lr &#x2190;  &amp;address_of_return */  
+    ldr lr, [lr]                     /* lr &#x2190;  *lr */  
+    bx lr                            /* return from main using lr */  
+address_of_return2 : .word return2  
+
+.global main  
+main:  
+    ldr r1, address_of_return        /* r1 &#x2190;  &amp;address_of_return */  
+    str lr, [r1]                     /* *r1 &#x2190;  lr */  
+
+    ldr r0, address_of_message1      /* r0 &#x2190;  &amp;message1 */  
+    bl printf                        /* call to printf */  
+
+    ldr r0, address_of_scan_pattern  /* r0 &#x2190;  &amp;scan_pattern */  
+    ldr r1, address_of_number_read   /* r1 &#x2190;  &amp;number_read */  
+    bl scanf                         /* call to scanf */  
+
+    ldr r0, address_of_number_read   /* r0 &#x2190;  &amp;number_read */  
+    ldr r0, [r0]                     /* r0 &#x2190;  *r0 */  
+    bl mult_by_5  
+
+    mov r2, r0                       /* r2 &#x2190;  r0 */  
+    ldr r1, address_of_number_read   /* r1 &#x2190;  &amp;number_read */  
+    ldr r1, [r1]                     /* r1 &#x2190;  *r1 */  
+    ldr r0, address_of_message2      /* r0 &#x2190;  &amp;message2 */  
+    bl printf                        /* call to printf */  
+
+    ldr lr, address_of_return        /* lr &#x2190;  &amp;address_of_return */  
+    ldr lr, [lr]                     /* lr &#x2190;  *lr */  
+    bx lr                            /* return from main using lr */  
+address_of_message1 : .word message1  
+address_of_message2 : .word message2  
+address_of_scan_pattern : .word scan_pattern  
+address_of_number_read : .word number_read  
+address_of_return : .word return  
+
+/* External */  
+.global printf  
+.global scanf
+</code></pre>
+<pre><code class="lang-asm">    bl mult_by_5  
+
+    mov r2, r0                       /* r2 &#x2190;  r0 */  
+    ldr r1, address_of_number_read   /* r1 &#x2190;  &amp;number_read */  
+    ldr r1, [r1]                     /* r1 &#x2190;  *r1 */  
+    ldr r0, address_of_message2      /* r0 &#x2190;  &amp;message2 */  
+    bl printf                        /* call to printf */
+</code></pre>
+<blockquote>
+<p>printf &#xAC00; 3&#xAC1C;&#xC758; &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB97C; &#xAC16;&#xB294; &#xACBD;&#xC6B0;&#xC784;<br>mult_by_5 &#xD568;&#xC218;&#xAC00; return&#xD55C; &#xAC12; r0&#xB97C; r2&#xC5D0; &#xC800;&#xC7A5;&#xD568;.  </p>
+</blockquote>
+<p><code>bx lr</code><br><code>bl funcrions_label</code>    </p>
+<blockquote>
+<p>bx&#xC640; bl &#xCC28;&#xC774; &#xC8FC;&#xC758;, bx&#xB294; &#xBCF4;&#xD1B5; &#xD568;&#xC218; &#xC885;&#xB8CC;&#xD560;&#xB54C; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xB4EF;. bl&#xB294; &#xD568;&#xC218; &#xBD84;&#xAE30;&#xC6A9; (&#xC9C1;&#xC811;&#xD638;&#xCD9C;)</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8-Arrays-and-structures.html" class="navigation navigation-prev " aria-label="Previous page: 8. Arrays and structures">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10-Functions-2-The-stack.html" class="navigation navigation-next " aria-label="Next page: 10. Functions-2 The stack">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9. Functions-1","level":"2.9","depth":1,"next":{"title":"10. Functions-2 The stack","level":"2.10","depth":1,"path":"markdowns/10-Functions-2-The-stack.md","ref":"markdowns/10-Functions-2-The-stack.md","articles":[]},"previous":{"title":"8. Arrays and structures","level":"2.8","depth":1,"path":"markdowns/8-Arrays-and-structures.md","ref":"markdowns/8-Arrays-and-structures.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/assembly"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/assembly"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":"UA-145404461-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/assembly/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/9-Functions-1.md","mtime":"2019-08-15T13:31:00.678Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-15T13:43:20.638Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

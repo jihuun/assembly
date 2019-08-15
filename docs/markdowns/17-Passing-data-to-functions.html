@@ -1,0 +1,1067 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>17. Passing data to functions · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="18-Local-data-and-the-frame-pointer.html" />
+    
+    
+    <link rel="prev" href="16-Switch-control-structure.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Learning Assembly Language with ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1-Introduction.html">
+            
+                <a href="1-Introduction.html">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2-Registers-and-Basic-arithmetic.html">
+            
+                <a href="2-Registers-and-Basic-arithmetic.html">
+            
+                    
+                    2. Registers and Basic arithmetic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="3-Memory-addreses-Load-and-store.html">
+            
+                <a href="3-Memory-addreses-Load-and-store.html">
+            
+                    
+                    3. Memory, addreses, Load and store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="4-GDB.html">
+            
+                <a href="4-GDB.html">
+            
+                    
+                    4. GDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="5-Branches.html">
+            
+                <a href="5-Branches.html">
+            
+                    
+                    5. Branches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="6-Control-Structures.html">
+            
+                <a href="6-Control-Structures.html">
+            
+                    
+                    6. Control Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="7-Indexing-modes.html">
+            
+                <a href="7-Indexing-modes.html">
+            
+                    
+                    7. Indexing modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="8-Arrays-and-structures.html">
+            
+                <a href="8-Arrays-and-structures.html">
+            
+                    
+                    8. Arrays and structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="9-Functions-1.html">
+            
+                <a href="9-Functions-1.html">
+            
+                    
+                    9. Functions-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10-Functions-2-The-stack.html">
+            
+                <a href="10-Functions-2-The-stack.html">
+            
+                    
+                    10. Functions-2 The stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11-Predication.html">
+            
+                <a href="11-Predication.html">
+            
+                    
+                    11. Predication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12-Loops-and-the-status-register.html">
+            
+                <a href="12-Loops-and-the-status-register.html">
+            
+                    
+                    12. Loops and the status register
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="13-Floating-point-numbers.html">
+            
+                <a href="13-Floating-point-numbers.html">
+            
+                    
+                    13. Floating point numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="14-Matrix-multiply.html">
+            
+                <a href="14-Matrix-multiply.html">
+            
+                    
+                    14. Matrix multiply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="15-Integer-division.html">
+            
+                <a href="15-Integer-division.html">
+            
+                    
+                    15. Integer division
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="16-Switch-control-structure.html">
+            
+                <a href="16-Switch-control-structure.html">
+            
+                    
+                    16. Switch control structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.17" data-path="17-Passing-data-to-functions.html">
+            
+                <a href="17-Passing-data-to-functions.html">
+            
+                    
+                    17. Passing data to functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="18-Local-data-and-the-frame-pointer.html">
+            
+                <a href="18-Local-data-and-the-frame-pointer.html">
+            
+                    
+                    18. Local data and the frame pointer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="19-System-calls.html">
+            
+                <a href="19-System-calls.html">
+            
+                    
+                    19. System calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="20-Indirect-calls.html">
+            
+                <a href="20-Indirect-calls.html">
+            
+                    
+                    20. Indirect calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21" data-path="21-Subword-data.html">
+            
+                <a href="21-Subword-data.html">
+            
+                    
+                    21. Subword data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="22-The-Thumb-instruction-set.html">
+            
+                <a href="22-The-Thumb-instruction-set.html">
+            
+                    
+                    22. The Thumb instruction set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="23-Nested-functions.html">
+            
+                <a href="23-Nested-functions.html">
+            
+                    
+                    23. Nested functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="24-Trampolines.html">
+            
+                <a href="24-Trampolines.html">
+            
+                    
+                    24. Trampolines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="25-Integer-SIMD.html">
+            
+                <a href="25-Integer-SIMD.html">
+            
+                    
+                    25. Integer SIMD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.26" data-path="26-A-primer-about-linking.html">
+            
+                <a href="26-A-primer-about-linking.html">
+            
+                    
+                    26. A primer about linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.27" data-path="27-dynamic-linking.html">
+            
+                <a href="27-dynamic-linking.html">
+            
+                    
+                    27. dynamic-linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="appendix.html">
+            
+                <a href="appendix.html">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >17. Passing data to functions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="17-passing-data-to-functions">17. Passing data to functions</h1>
+<hr>
+<p>&#xD568;&#xC218;&#xC5D0; &#xB370;&#xC774;&#xD130; &#xC804;&#xB2EC;&#xD558;&#xAE30;<br>&#xB2E4;&#xC74C; &#xB450;&#xAC00;&#xC9C0; &#xD56D;&#xBAA9;&#xC5D0; &#xB300;&#xD574; &#xB354; &#xC54C;&#xC544;&#xBCF8;&#xB2E4;  </p>
+<pre><code>* &#xB9CE;&#xC740; &#xC591;&#xC758; &#xB514;&#xC774;&#xD130; &#xD568;&#xC218;&#xC5D0; &#xC778;&#xC790;&#xB85C; &#xC804;&#xB2EC;&#xD558;&#xAE30;  
+* &#xD558;&#xB098; &#xC774;&#xC0C1;&#xC758; &#xAC12; return &#xD558;&#xAE30;  
+</code></pre><h2 id="so-what-is-a-pointer">So what is a pointer?</h2>
+<pre><code class="lang-asm">.data
+
+.align 4
+number_1  : .word 3
+number_2  : .word 4
+
+.text
+.globl main
+
+main:
+    ldr r1, address_of_number_2  /* r1 &#x2190;  &amp;number_2 */
+    str r1, pointer_to_number    /* pointer_to_number &#x2190;  r1, this is pointer_to_number &#x2190;  &amp;number_2 */
+
+    bx lr
+
+pointer_to_number: .word number_1
+address_of_number_2: .word number_2
+</code></pre>
+<blockquote>
+<p>address_of_number_2&#xBCC0;&#xC218;&#xC5D0; &#xB2F4;&#xAE34; &#xC8FC;&#xC18C;&#xB97C;  pointer_to_number &#xBCC0;&#xC218;&#xC5D0; &#xC800;&#xC7A5;<br>-&gt; Segmentation fault &#xBC1C;&#xC0DD;&#xD568;.<br>.text &#xC139;&#xC158;&#xC5D0; &#xC788;&#xB294; &#xBCC0;&#xC218;&#xB294; &#xAC12;&#xC744; &#xBCC0;&#xACBD;&#xD558;&#xB294;&#xAC83;&#xC774; &#xBD88;&#xAC00;&#xB2A5;. 
+&#xD3EC;&#xC778;&#xD130; &#xAC12;&#xC744; &#xBCC0;&#xACBD;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; .data &#xC139;&#xC158;&#xC5D0; &#xC788;&#xC5B4;&#xC57C; &#xD568;.   </p>
+</blockquote>
+<pre><code class="lang-asm">.data
+
+.align 4
+number_1  : .word 3
+number_2  : .word 4
+pointer_to_number: .word 0
+
+.text
+.globl main
+
+
+main:
+    ldr r0, addr_of_pointer_to_number
+                             /* r0 &#x2190;  &amp;pointer_to_number &#xC8FC;&#xC18C; */
+
+    ldr r1, addr_of_number_2 /* r1 &#x2190;  &amp;number_2 &#xC8FC;&#xC18C;*/
+
+    str r1, [r0]             /* *r0 &#x2190;  r1.
+                                This is actually pointer_to_number &#x2190;  &amp;number_2 */
+                 /* r0(&#xC8FC;&#xC18C;)&#xAC00; &#xAC00; &#xAC00;&#xB9AC;&#xD0A4;&#xB294; &#xAC12;&#xC5D0; r1( number_2&#xC758; &#xC8FC;&#xC18C;, &#xD3EC;&#xC778;&#xD130;) &#xC800;&#xC7A5; */
+                 r0: addr_of_number2: &#xC800;&#xC7A5;
+
+
+    ldr r1, [r0]             /* r1 &#x2190;  *r0.
+                                This is actually r1 &#x2190;  pointer_to_number
+                                Since pointer_to_number has the value &amp;number_2
+                                then this is like r1 &#x2190;  &amp;number_2 */
+                 /* number_2 &#xC8FC;&#xC18C;&#xB97C; r1&#xC5D0; &#xC800;&#xC7A5; */
+                 /* r1&#xC5D0;&#xB294; &#xC8FC;&#xC18C;&#xAC12;&#xC774; &#xC788;&#xC74C; */
+                 r1: addr_of_number2: &#xC8FC;&#xC18C;&#xAC12; &#xC800;&#xC7A5;
+
+
+    ldr r0, [r1]             /* r0 &#x2190;  *r1
+                                Since r1 had as value &amp;number_2
+                                then this is like r0 &#x2190;  number_2 */
+                 /* r1&#xC774; &#xAC00;&#xB9AC;&#xD0A4;&#xB294; &#xAC12;&#xC744; r0&#xC5D0; &#xC800;&#xC7A5;  */
+                 /* &#xACB0;&#xAD6D; r0 &#xC5D0;&#xB294; addr_of_number_2 &#xC8FC;&#xC18C;&#xAC12; &#xC800;&#xC7A5;. */
+
+    bx lr
+
+addr_of_number_1: .word number_1
+addr_of_number_2: .word number_2
+addr_of_pointer_to_number: .word pointer_to_number
+</code></pre>
+<blockquote>
+<p>label &#xC774; &#xAC00;&#xC9C4; &#xC8FC;&#xC18C;&#xC790;&#xCCB4;&#xB97C; &#xBC14;&#xAFC0; &#xC218;&#xB294; &#xC5C6;&#xC74C;. &#xBCC0;&#xC218;&#xC5D0; &#xC800;&#xC7A5;&#xD574;&#xC11C; &#xD3EC;&#xC778;&#xD130;&#xB85C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C;&#xD568;.</p>
+</blockquote>
+<h2 id="&#xD568;&#xC218;&#xC5D0;-&#xBC30;&#xC5F4;-&#xC804;&#xB2EC;&#xD558;&#xAE30;-call-by-value">&#xD568;&#xC218;&#xC5D0; &#xBC30;&#xC5F4; &#xC804;&#xB2EC;&#xD558;&#xAE30; &quot;Call by Value&quot;</h2>
+<p>sum_array_value &#xD568;&#xC218;&#xB294; &#xC778;&#xC790;&#xB85C; &#xC804;&#xB2EC; &#xB41C; &#xBC30;&#xC5F4;&#xC744; modify&#xD558;&#xC9C0;&#xC54A;&#xACE0; &#xB2E8;&#xC9C0; read&#xB9CC; &#xD55C;&#xB2E4;.<br>r0&#xB294; &#xBC30;&#xC5F4;&#xC758; &#xD06C;&#xAE30;&#xC774;&#xACE0; r1 ~ r3&#xC740; &#xC2E4;&#xC81C; &#xBC30;&#xC5F4;&#xC758; &#xAC12;&#xC774; &#xC804;&#xB2EC;&#xB418;&#xC5B4; &#xC628;&#xB2E4;. &#xBC30;&#xC5F4; &#xD06C;&#xAE30;&#xAC00; 2&#xB77C;&#xBA74; r2&#xAE4C;&#xC9C0;&#xB9CC; &#xBC30;&#xC5F4; &#xAC12;&#xC774; &#xC804;&#xB2EC;&#xB418;&#xACE0; &#xD06C;&#xAE30;&#xAC00; 4&#xC774;&#xC0C1;&#xC774;&#xB77C;&#xBA74; &#xBC30;&#xC5F4; 4&#xBC88;&#xC9F8; &#xAC12;&#xBD80;&#xD130;&#xB294; &#xB2E4;&#xB978;&#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xB2E4;&#xB8E8;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.   </p>
+<ul>
+<li>sum_array_value &#xD568;&#xC218;</li>
+</ul>
+<pre><code class="lang-asm">sum_array_value : 
+    push {r4, r5, r6, lr}  /* &#xD568;&#xC218; &#xC2DC;&#xC791;&#xC804; &#xC774; &#xD568;&#xC218;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; register&#xBCC0;&#xC218;&#xC758; &#xAE30;&#xC874;&#xAC12;&#xC740; stack&#xC5D0; &#xB530;&#xB85C; &#xBCF4;&#xC874;, &#xD568;&#xC218; &#xC885;&#xB8CC; &#xC9C1;&#xC804; &#xBCF5;&#xC6D0; */
+
+    /* We have passed all the data by value */
+
+    /* r4 &#xB294; &#xCD5C;&#xC885; &#xD569;&#xACC4;&#xAC00; &#xC800;&#xC7A5;&#xB420;&#xAC83; */
+    mov r4, #0      /* r4 &#x2190;  0 */
+    /* In r0 we have the number of items of the array */
+
+    cmp r0, #1            /* r0 - #1 and update cpsr */
+    blt .Lend_of_sum_array  /* if r0 &lt; 1 branch to end_of_sum_array */
+    add r4, r4, r1        /* add the first item */
+
+    cmp r0, #2            /* r0 - #2 and update cpsr */
+    blt .Lend_of_sum_array  /* if r0 &lt; 2 branch to end_of_sum_array */
+    add r4, r4, r2        /* add the second item */
+
+    cmp r0, #3            /* r0 - #3 and update cpsr */
+                          /* &#xBC30;&#xC5F4;&#xD06C;&#xAE30;&#xAC00; 2&#xC600;&#xB2E4;&#xBA74; r4&#xC5D0; r1+r2 &#xAE4C;&#xC9C0;&#xD55C;&#xB4A4; .Lend_* &#xB85C; &#xC774;&#xB3D9;&#xD574;&#xC11C; return */
+    blt .Lend_of_sum_array  /* if r0 &lt; 3 branch to end_of_sum_array */
+    add r4, r4, r3        /* add the third item */
+
+    /* 
+     The stack at this point looks like this
+       |                | (lower addresses)
+       |                |
+       | lr             |  &lt;- sp points here
+       | r6             |  &lt;- this is sp + 4
+       | r5             |  &lt;- this is sp + 8
+       | r4             |  &lt;- this is sp + 12
+       | big_array[3]   |  &lt;- this is sp + 16 (we want r5 to point here)
+       | big_array[4]   |
+       |     ...        |
+       | big_array[255] |
+       |                | 
+       |                | (higher addresses)
+
+    keep in r5 the address where the stack-passed portion of the array starts */
+    /* &#xBC30;&#xC5F4;&#xC758; a[0~2]&#xB294; r#&#xC5D0; &#xB098;&#xBA38;&#xC9C0;&#xB294; stack &#xC5D0; push &#xD574;&#xB193;&#xC74C; */
+
+    add r5, sp, #16 /* r5 &#x2190;  sp + 16 */ /* r5&#xB294; &#xB2E4;&#xC74C; &#xBC30;&#xC5F4;&#xAC12; &#xC2DC;&#xC791; &#xC9C0;&#xC810; */
+
+    /* in register r3 we will count how many items we have read
+       from the stack. */
+    mov r3, #0
+
+    /* in the stack there will always be 3 less items because
+       the first 3 were already passed in registers
+       (recall that r0 had how many items were in the array) */
+    sub r0, r0, #3
+
+    b .Lcheck_loop_sum_array
+    .Lloop_sum_array:
+      ldr r6, [r5, r3, LSL #2]       /* r6 &#x2190;  *(r5 + r3 * 4) load 
+                                        the array item r3 from the stack */
+                         /* r5&#xB294; &#xBC30;&#xC5F4; a[3] &#xC2DC;&#xC791; &#xC9C0;&#xC810; */
+      add r4, r4, r6                 /* r4 &#x2190;  r4 + r6
+                                        accumulate in r4 */
+      add r3, r3, #1                 /* r3 &#x2190;  r3 + 1 
+                                        move to the next item */
+    .Lcheck_loop_sum_array:
+      cmp r3, r0           /* r0 - r3 and update cpsr */ /* r0: &#xB0A8;&#xC740; &#xCD1D; &#xBC30;&#xC5F4; &#xAC2F;&#xC218;, r3: &#xBC30;&#xC5F4; &#xCE74;&#xC6B4;&#xD2B8; 0&#xBD80;&#xD130; */
+      blt .Lloop_sum_array   /* if r3 &lt; r0  branch to loop_sum_array */
+
+  .Lend_of_sum_array:
+    mov r0, r4  /* r0 &#x2190;  r4, to return the value of the sum */
+    pop {r4, r5, r6, lr}
+
+    bx lr
+</code></pre>
+<blockquote>
+<p>r1, r2, r3 &#xAE4C;&#xC9C0;&#xB294; register&#xC5D0;&#xC11C; &#xB354;&#xD558;&#xACE0; &#xADF8; &#xC774;&#xD6C4; &#xAC12;&#xC740; loop&#xB97C; &#xB3CC;&#xB824;&#xC11C; &#xB354;&#xD588;&#xC74C;.  </p>
+</blockquote>
+<ul>
+<li>sum_array_value &#xD568;&#xC218; &#xD638;&#xCD9C; &#xD558;&#xAE30;</li>
+</ul>
+<p>&#xC704; sum_array_value : &#xD568;&#xC218;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; call &#xD55C;&#xB2E4;.<br>&#xC77C;&#xBD80;&#xB294; r0~r3 &#xB85C; &#xC804;&#xB2EC;&#xD558;&#xACE0; &#xB098;&#xBA38;&#xC9C0;&#xB294; stack&#xC5D0; push&#xD558;&#xB294; &#xACFC;&#xC815;  </p>
+<pre><code class="lang-asm">.data
+
+.align 4
+
+big_array :
+.word 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+.word 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41
+.word 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61
+.word 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81
+.word 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+.word 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116
+.word 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132
+.word 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148
+.word 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164
+.word 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180
+.word 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196
+.word 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212
+.word 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228
+.word 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244
+.word 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255
+
+
+.text
+.globl main
+
+sum_array_value :
+   /* code shown above */
+
+main:
+    push {r4, r5, r6, r7, r8, lr}
+    /* we will not use r8 but we need to keep the function 8-byte aligned */
+
+    ldr r4, address_of_big_array
+
+    /* Prepare call */
+
+    mov r0, #256   /* Load in the first parameter the number of items r0 &#x2190;  256 */
+
+    ldr r1, [r4]     /* load in the second parameter the first item of the array */
+    ldr r2, [r4, #4] /* load in the third parameter the second item of the array */
+    ldr r3, [r4, #8] /* load in the fourth parameter the third item of the array */
+
+    /* before pushing anything in the stack keep its position */
+    mov r7, sp     /* stack&#xC5D0; &#xBC30;&#xC5F4; &#xAC12;&#xB4E4;&#xC744; push &#xD558;&#xAE30; &#xC804;&#xC5D0; &#xAE30;&#xC874; stack pointer&#xB294; save&#xC2DC;&#xCF1C;&#xB193;&#xC74C; */
+
+    /* We cannot use more registers, now we have to push them onto the stack
+       (in reverse order) */
+    mov r5, #255   /* r5 &#x2190;  255
+                      This is the last item position
+                      (note that the first would be in position 0) */
+           /* stack&#xC5D0;&#xB294; &#xB9E8;&#xB9C8;&#xC9C0;&#xB9C9; &#xAC12; 255&#xBD80;&#xD130; push */
+
+    /* 255&#xBD80;&#xD130; 3&#xAE4C;&#xC9C0; &#xC21C;&#xC11C;&#xB300;&#xB85C; stack&#xC5D0; push */
+
+    b .Lcheck_pass_parameter_loop
+    .Lpass_parameter_loop:
+
+      ldr r6, [r4, r5, LSL #2]  /* r6 &#x2190;  *(r4 + r5 * 4).
+                                   loads the item in position r5 into r6. Note that
+                                   we have to multiply by 4 because this is the size
+                                   of each item in the array */
+      push {r6}                 /* push the loaded value to the stack */
+      sub r5, r5, #1            /* we are done with the current item,
+                                   go to the previous index of the array */
+    .Lcheck_pass_parameter_loop:
+      cmp r5, #2                /* compute r5 - #2 and update cpsr */
+      bne .Lpass_parameter_loop   /* if r5 != #2 branch to pass_parameter_loop */
+
+    /* We are done, we have passed all the values of the array,
+       now call the function */
+    bl sum_array_value
+
+    /* restore the stack position */
+    /* &#xD568;&#xC218; &#xC885;&#xB8CC;&#xD6C4; &#xAE30;&#xC874; stack pointer&#xB85C; &#xBCF5;&#xAD6C;&#xD574;&#xC918;&#xC57C;&#xD568;.  */
+    mov sp, r7 
+
+    /* prepare the call to printf */
+    ... &#xC911;&#xB7B5;
+
+    pop {r4, r5, r6, r7, r8, lr}
+    bx lr
+
+address_of_big_array : .word big_array
+</code></pre>
+<blockquote>
+<p><code>mov sp, r7</code><br>&#xC911;&#xC694;: <strong>Keeping the stack synched</strong> is essential when <strong>calling functions</strong>.  </p>
+</blockquote>
+<h2 id="&#xD568;&#xC218;&#xC5D0;-&#xBC30;&#xC5F4;-&#xC804;&#xB2EC;&#xD558;&#xAE30;-call-by-reference">&#xD568;&#xC218;&#xC5D0; &#xBC30;&#xC5F4; &#xC804;&#xB2EC;&#xD558;&#xAE30; &quot;Call by Reference&quot;</h2>
+<p>&#xBAA8;&#xB4E0; &#xBC30;&#xC5F4;&#xAC12;&#xC744; stack&#xC5D0; push&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC740; wasteful &#xD558;&#xB2E4;. &#xBC30;&#xC5F4;&#xAC12; &#xC790;&#xCCB4;&#xB97C; &#xD568;&#xC218;&#xB85C; &#xC804;&#xB2EC;&#xD558;&#xAE30;&#xBCF4;&#xB2E4; &#xBC30;&#xC5F4;&#xC758; &#xC8FC;&#xC18C;&#xAC12;&#xC744; &#xD568;&#xC218;&#xC758; &#xC778;&#xC790;&#xB85C; &#xC804;&#xB2EC;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774; &#xD544;&#xC694;&#xD558;&#xB2E4;.  </p>
+<ul>
+<li>&#xD568;&#xC218;&#xC778;&#xC790;&#xB85C; &#xBC30;&#xC5F4; &#xC8FC;&#xC18C;&#xAC12; &#xC804;&#xB2EC;&#xD558;&#xB294; code  </li>
+</ul>
+<pre><code class="lang-asm">.data
+
+.align 4
+
+big_array :
+  /* Same as above */
+
+.align 4
+
+message: .asciz &quot;The sum of 0 to 255 is %d\n&quot;
+
+.text
+.globl main
+
+sum_array_ref :
+    /* Parameters: 
+           r0  Number of items
+           r1  Address of the array
+    */
+    push {r4, r5, r6, lr}
+
+    /* We have passed all the data by reference */
+
+    /* r4 will hold the sum so far */
+    mov r4, #0      /* r4 &#x2190;  0 */
+    mov r5, #0      /* r5 &#x2190;  0 */
+
+    b .Lcheck_loop_array_sum
+    .Lloop_array_sum:
+      ldr r6, [r1, r5, LSL #2]   /* r6 &#x2190;  *(r1 + r5 * 4) */
+      add r4, r4, r6             /* r4 &#x2190;  r4 + r6 */
+      add r5, r5, #1             /* r5 &#x2190;  r5 + 1 */
+    .Lcheck_loop_array_sum:
+      cmp r5, r0                 /* r5 - r0 and update cpsr */
+      bne .Lloop_array_sum       /* if r5 != r0 go to .Lloop_array_sum */
+
+    mov r0, r4  /* r0 &#x2190;  r4, to return the value of the sum */
+    pop {r4, r5, r6, lr}
+
+    bx lr
+
+
+main:
+    push {r4, lr}
+    /* we will not use r4 but we need to keep the function 8-byte aligned */
+
+    mov r0, #256
+    ldr r1, address_of_big_array
+
+    /* &#xD568;&#xC218; &#xD638;&#xCD9C;*/
+    bl sum_array_ref
+
+    /* prepare the call to printf */ ...(&#xC0DD;&#xB7B5;)
+
+    pop {r4, lr}
+    bx lr
+
+address_of_big_array : .word big_array
+address_of_message : .word message
+</code></pre>
+<blockquote>
+<p>&#xC0C1;&#xB300;&#xC801;&#xC73C;&#xB85C; &#xB300;&#xB2E8;&#xD788; &#xC2EC;&#xD50C;&#xD568;.  </p>
+</blockquote>
+<h2 id="&#xD3EC;&#xC778;&#xD130;&#xB97C;-&#xC774;&#xC6A9;&#xD574;&#xC11C;-data-&#xBCC0;&#xACBD;&#xD558;&#xAE30;">&#xD3EC;&#xC778;&#xD130;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; data &#xBCC0;&#xACBD;&#xD558;&#xAE30;</h2>
+<ul>
+<li>call by value<pre><code class="lang-asm">increment:
+  add r0, r0, #1  /* r0 &#x2190;  r0 + 1 */
+</code></pre>
+<blockquote>
+<p>r0 &#xB85C; &#xC778;&#xC790;(&#xAC12;)&#xB97C; &#xC804;&#xB2EC;&#xBC1B;&#xACE0; r0&#xB97C; return.<br>&#xD568;&#xC218; &#xC885;&#xB8CC;&#xD6C4; r0 &#xB294; &#xBCC0;&#xB3D9;&#xC5C6;&#xC74C;  </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>call by reference</li>
+</ul>
+<pre><code class="lang-asm">increment_ptr:
+  ldr r1, [r0]      /* r1 &#x2190;  *r0 */
+  add r1, r1, #1    /* r1 &#x2190;  r1 + 1 */
+  str r1, [r0]      /* *r0 &#x2190;  r1 */
+</code></pre>
+<blockquote>
+<p>r0 &#xB85C; &#xC778;&#xC790;(&#xD3EC;&#xC778;&#xD130;)&#xB97C; &#xC804;&#xB2EC;&#xBC1B;&#xACE0; r0&#xB97C; return.<br>&#xD568;&#xC218; &#xC885;&#xB8CC;&#xD6C4; r0+=1 &#xB418;&#xC5B4;&#xC788;&#xC74C;.  </p>
+</blockquote>
+<ul>
+<li>big_array[] &#xAC01; &#xAC12;&#xC5D0; x2&#xD558;&#xB294; &#xCF54;&#xB4DC; (by reference)</li>
+</ul>
+<pre><code class="lang-asm">/* double_array.s */
+
+.data
+
+.align 4
+big_array :
+ /* Same as above */
+
+.align 4
+message: .asciz &quot;Item at position %d has value %d\n&quot;
+
+.text
+.globl main
+
+double_array : 
+    /* Parameters: 
+           r0  Number of items
+           r1  Address of the array
+    */
+    push {r4, r5, r6, lr} /* &#xC0AC;&#xC6A9;&#xD560; register&#xBCC0;&#xC218;&#xC758; &#xAE30;&#xC874;&#xAC12;&#xC740; stack&#xC5D0; &#xB530;&#xB85C; &#xBCF4;&#xC874; */
+
+    mov r4, #0      /* r4 &#x2190;  0 */
+
+    b .Lcheck_loop_array_double
+    .Lloop_array_double:
+      ldr r5, [r1, r4, LSL #2]   /* r5 &#x2190;  *(r1 + r4 * 4) */
+      mov r5, r5, LSL #1         /* r5 &#x2190;  r5 * 2 */
+      str r5, [r1, r4, LSL #2]   /* *(r1 + r4 * 4) &#x2190;  r5 */
+      add r4, r4, #1             /* r4 &#x2190;  r4 + 1 */
+    .Lcheck_loop_array_double:
+      cmp r4, r0                 /* r4 - r0 and update cpsr */
+      bne .Lloop_array_double    /* if r4 != r0 go to .Lloop_array_double */
+
+    pop {r4, r5, r6, lr}
+
+    bx lr
+
+print_each_item:
+    push {r4, r5, r6, r7, r8, lr} /* r8 is unused */
+
+    mov r4, #0      /* r4 &#x2190;  0 */
+    mov r6, r0      /* r6 &#x2190;  r0. Keep r0 because we will overwrite it */
+    mov r7, r1      /* r7 &#x2190;  r1. Keep r1 because we will overwrite it */
+
+
+    b .Lcheck_loop_print_items
+    .Lloop_print_items:
+      ldr r5, [r7, r4, LSL #2]   /* r5 &#x2190;  *(r7 + r4 * 4) */
+
+      /* Prepare the call to printf */
+      ldr r0, address_of_message /* first parameter of the call to printf below */
+      mov r1, r4      /* second parameter: item position */
+      mov r2, r5      /* third parameter: item value */
+      bl printf       /* call printf */
+
+      add r4, r4, #1             /* r4 &#x2190;  r4 + 1 */
+    .Lcheck_loop_print_items:
+      cmp r4, r6                 /* r4 - r6 and update cpsr */
+      bne .Lloop_print_items       /* if r4 != r6 goto .Lloop_print_items */
+
+    pop {r4, r5, r6, r7, r8, lr}
+    bx lr
+
+main:
+    push {r4, lr}
+    /* we will not use r4 but we need to keep the function 8-byte aligned */
+
+    /* first call print_each_item */
+    mov r0, #256                   /* first_parameter: number of items */
+    ldr r1, address_of_big_array   /* second parameter: address of the array */
+    bl print_each_item             /* call to print_each_item */
+
+    /* call to double_array */
+    mov r0, #256                   /* first_parameter: number of items */
+    ldr r1, address_of_big_array   /* second parameter: address of the array */
+    bl double_array               /* call to double_array */
+
+    /* second call print_each_item */
+    mov r0, #256                   /* first_parameter: number of items */
+    ldr r1, address_of_big_array   /* second parameter: address of the array */
+    bl print_each_item             /* call to print_each_item */
+
+    pop {r4, lr}
+    bx lr
+
+address_of_big_array : .word big_array
+address_of_message : .word message
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="16-Switch-control-structure.html" class="navigation navigation-prev " aria-label="Previous page: 16. Switch control structure">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="18-Local-data-and-the-frame-pointer.html" class="navigation navigation-next " aria-label="Next page: 18. Local data and the frame pointer">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"17. Passing data to functions","level":"2.17","depth":1,"next":{"title":"18. Local data and the frame pointer","level":"2.18","depth":1,"path":"markdowns/18-Local-data-and-the-frame-pointer.md","ref":"markdowns/18-Local-data-and-the-frame-pointer.md","articles":[]},"previous":{"title":"16. Switch control structure","level":"2.16","depth":1,"path":"markdowns/16-Switch-control-structure.md","ref":"markdowns/16-Switch-control-structure.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/assembly"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/assembly"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":"UA-145404461-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/assembly/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/17-Passing-data-to-functions.md","mtime":"2019-08-15T13:32:50.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-15T13:43:20.638Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

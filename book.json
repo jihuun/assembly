@@ -1,0 +1,25 @@
+{
+    "plugins": ["ga", "simple-page-toc", "disqus", "back-to-top-button", "edit-link", "github"],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "jihuun"
+        },
+        "simple-page-toc": {
+            "maxDepth": 2,
+            "skipFirstH1": true
+        },
+        "edit-link": {
+            "base": "https://github.com/jihuun/assembly/edit/master",
+            "label": "Edit"
+        },
+        "github": {
+            "url": "https://github.com/jihuun/assembly"
+        },
+        "ga": {
+            "token": "UA-145404461-1"
+        }
+    },
+    "variables": {
+        "BASE_URL": "http://soopsaram.com/assembly"
+    }
+}

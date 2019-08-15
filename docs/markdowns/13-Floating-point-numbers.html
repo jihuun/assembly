@@ -1,0 +1,786 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>13. Floating point numbers · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="14-Matrix-multiply.html" />
+    
+    
+    <link rel="prev" href="12-Loops-and-the-status-register.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Learning Assembly Language with ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="1-Introduction.html">
+            
+                <a href="1-Introduction.html">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="2-Registers-and-Basic-arithmetic.html">
+            
+                <a href="2-Registers-and-Basic-arithmetic.html">
+            
+                    
+                    2. Registers and Basic arithmetic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="3-Memory-addreses-Load-and-store.html">
+            
+                <a href="3-Memory-addreses-Load-and-store.html">
+            
+                    
+                    3. Memory, addreses, Load and store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="4-GDB.html">
+            
+                <a href="4-GDB.html">
+            
+                    
+                    4. GDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="5-Branches.html">
+            
+                <a href="5-Branches.html">
+            
+                    
+                    5. Branches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="6-Control-Structures.html">
+            
+                <a href="6-Control-Structures.html">
+            
+                    
+                    6. Control Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="7-Indexing-modes.html">
+            
+                <a href="7-Indexing-modes.html">
+            
+                    
+                    7. Indexing modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="8-Arrays-and-structures.html">
+            
+                <a href="8-Arrays-and-structures.html">
+            
+                    
+                    8. Arrays and structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="9-Functions-1.html">
+            
+                <a href="9-Functions-1.html">
+            
+                    
+                    9. Functions-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10-Functions-2-The-stack.html">
+            
+                <a href="10-Functions-2-The-stack.html">
+            
+                    
+                    10. Functions-2 The stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11-Predication.html">
+            
+                <a href="11-Predication.html">
+            
+                    
+                    11. Predication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="12-Loops-and-the-status-register.html">
+            
+                <a href="12-Loops-and-the-status-register.html">
+            
+                    
+                    12. Loops and the status register
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.13" data-path="13-Floating-point-numbers.html">
+            
+                <a href="13-Floating-point-numbers.html">
+            
+                    
+                    13. Floating point numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="14-Matrix-multiply.html">
+            
+                <a href="14-Matrix-multiply.html">
+            
+                    
+                    14. Matrix multiply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="15-Integer-division.html">
+            
+                <a href="15-Integer-division.html">
+            
+                    
+                    15. Integer division
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="16-Switch-control-structure.html">
+            
+                <a href="16-Switch-control-structure.html">
+            
+                    
+                    16. Switch control structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="17-Passing-data-to-functions.html">
+            
+                <a href="17-Passing-data-to-functions.html">
+            
+                    
+                    17. Passing data to functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="18-Local-data-and-the-frame-pointer.html">
+            
+                <a href="18-Local-data-and-the-frame-pointer.html">
+            
+                    
+                    18. Local data and the frame pointer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="19-System-calls.html">
+            
+                <a href="19-System-calls.html">
+            
+                    
+                    19. System calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="20-Indirect-calls.html">
+            
+                <a href="20-Indirect-calls.html">
+            
+                    
+                    20. Indirect calls
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21" data-path="21-Subword-data.html">
+            
+                <a href="21-Subword-data.html">
+            
+                    
+                    21. Subword data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="22-The-Thumb-instruction-set.html">
+            
+                <a href="22-The-Thumb-instruction-set.html">
+            
+                    
+                    22. The Thumb instruction set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="23-Nested-functions.html">
+            
+                <a href="23-Nested-functions.html">
+            
+                    
+                    23. Nested functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="24-Trampolines.html">
+            
+                <a href="24-Trampolines.html">
+            
+                    
+                    24. Trampolines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="25-Integer-SIMD.html">
+            
+                <a href="25-Integer-SIMD.html">
+            
+                    
+                    25. Integer SIMD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.26" data-path="26-A-primer-about-linking.html">
+            
+                <a href="26-A-primer-about-linking.html">
+            
+                    
+                    26. A primer about linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.27" data-path="27-dynamic-linking.html">
+            
+                <a href="27-dynamic-linking.html">
+            
+                    
+                    27. dynamic-linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="appendix.html">
+            
+                <a href="appendix.html">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >13. Floating point numbers</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="13-floating-point-numbers">13. Floating point numbers</h1>
+<hr>
+<p>from the IEEE754   </p>
+<pre><code>sign(&#xBD80;&#xD638;) | exponent(&#xC9C0;&#xC218;) | mentissa(&#xAC00;&#xC218;)
+</code></pre><p>(&#xAC00;&#xC218;)x2^(&#xC9C0;&#xC218;)  </p>
+<p> single-precision floating point: &#xB2E8;&#xC815;&#xBC00;&#xB3C4;, 32bit<br> double-precision floating point: &#xBC30;&#xC815;&#xBC00;&#xB3C4;, 64bit<br>&#xC5F0;&#xC0B0;&#xC18D;&#xB3C4;&#xB294; &#xBC30;&#xC815;&#xB3C4;&#xAC00; 1.5~2&#xBC30; &#xB290;&#xB9AC;&#xB2E4;.  </p>
+<h2 id="vfpv2-registers-s0--s31-d0--d15">VFPv2 Registers: <code>s0</code> ~ <code>s31</code>, <code>d0</code> ~ <code>d15</code></h2>
+<p>ARM&#xC740; &#xBD80;&#xB3D9;&#xC18C;&#xC218;&#xC810; &#xC5F0;&#xC0B0;&#xC744; &#xC704;&#xD55C; Special register&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB2E4;. &#xC774;&#xB984;&#xC740;<br>single precision : s0 ~ s31<br>double precision : d0 ~ d15  </p>
+<p>3&#xC885;&#xB958;&#xC758; &#xCEE8;&#xD2B8;&#xB864; register&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB2E4;<br><code>fpscr</code> : <code>cpsr</code>&#xACFC; &#xC720;&#xC0AC; N,Z,C,V flags&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC74C;  </p>
+<p><img src="http://thinkingeek.com/wp-content/uploads/2013/04/vfp-registers.png" alt="vfp"><br>    &#xADF8;&#xB9BC;: &#xC21C;&#xC11C;&#xB300;&#xB85C; bank 0, 1, 2, 3 &#xC778;&#xB4EF;  </p>
+<h2 id="arithmetic-operations">Arithmetic operations</h2>
+<p>&#xB450; &#xC885;&#xB958;&#xC758; &#xC0B0;&#xC220;&#xC5F0;&#xC0B0; &#xD615;&#xC2DD;&#xC774; &#xC788;&#xB2E4;.  </p>
+<pre><code>* `vname Rdest, Rsource1, Rsource2`  
+    name&#xC740; &#xBA85;&#xB839;&#xC5B4;&#xB85C; &#xB300;&#xCCB4;  
+* `fname Rdest, Rsource1`  
+</code></pre><p>&#xADF8;&#xB9AC;&#xACE0; &#xC138; &#xC885;&#xB958;&#xC758; &#xC5F0;&#xC0B0; &#xBAA8;&#xB4DC;&#xAC00; &#xC788;&#xB2E4;.  </p>
+<pre><code>* Scalar : bank0 &#xC0AC;&#xC6A9;  
+* Vectorial : bank 1/2/3 &#xC0AC;&#xC6A9;  
+* Scalar expanded : &#xD63C;&#xD569;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;?  
+</code></pre><pre><code class="lang-asm">// For this example assume that len = 4, stride = 2  
+vadd.f32 s1, s2, s3    /* s1 &#x2190;  s2 + s3. Scalar operation because Rdest = s1 in the bank 0 */  
+vadd.f32 s1, s8, s15    /* s1 &#x2190;  s8 + s15. ditto */  
+vadd.f32 s8, s16, s24    /* s8  &#x2190;  s16 + s24  
+                             s10 &#x2190;  s18 + s26  
+                             s12 &#x2190;  s20 + s28  
+                             s14 &#x2190;  s22 + s30  
+                             or more compactly {s8,s10,s12,s14} &#x2190;  {s16,s18,s20,s22} + {s24,s26,s28,s30}  
+                             Vectorial, since Rdest and Rsource2 are not in bank 0 */  
+
+vadd.f32 s10, s16, s24    /* {s10,s12,s14,s8} &#x2190;  {s16,s18,s20,s22} + {s24,s26,s28,s30}.  
+                           Vectorial, but note the wraparound inside the bank after s14.  */  
+vadd.f32 s8, s16, s3    /* {s8,s10,s12,s14} &#x2190;  {s16,s18,s20,s22} + {s3,s3,s3,s3}  
+                            Scalar expanded since Rsource2 is in the bank 0 */
+</code></pre>
+<blockquote>
+<p><code>vadd.f32</code> : single-precision &#xC758; add &#xC5F0;&#xC0B0;  </p>
+<p><code>vaddne.f32</code> &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; predication&#xB3C4; &#xAC00;&#xB2A5; (not eq &#xC77C;&#xB54C; add &#xD558;&#xB77C;)  </p>
+</blockquote>
+<h2 id="load-and-store">Load and store</h2>
+<p><code>vldr</code> <code>vstr</code> &#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xBD80;&#xB3D9;&#xC18C;&#xC218;&#xC810; &#xAC12;&#xC744; load/store&#xD560; &#xC218; &#xC788;&#xB2E4;.  </p>
+<pre><code class="lang-asm">vldr s1, [r3]         /* s1 &#x2190;  *r3 */  
+vldr s2, [r3, #4]     /* s2 &#x2190;  *(r3 + 4) */  
+vldr s3, [r3, #8]     /* s3 &#x2190;  *(r3 + 8) */  
+vldr s4, [r3, #12]    /* s3 &#x2190;  *(r3 + 12) */  
+
+vstr s10, [r4]        /* *r4 &#x2190;  s10 */  
+vstr s11, [r4, #4]    /* *(r4 + 4) &#x2190;  s11 */  
+vstr s12, [r4, #8]    /* *(r4 + 8) &#x2190;  s12 */  
+vstr s13, [r4, #12]   /* *(r4 + 12) &#x2190;  s13 */
+</code></pre>
+<blockquote>
+<p>&#xC774;&#xB7F0; &#xC5F0;&#xC0B0;&#xC774; &#xAC00;&#xB2A5;  </p>
+</blockquote>
+<pre><code>vldm indexing-mode precision Rbase{!}, floating-point-register-set  
+vstm indexing-mode precision Rbase{!}, floating-point-register-set
+</code></pre><blockquote>
+<p>&#xB2E4;&#xC218;&#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xC5F0;&#xC0B0;&#xC778; ldm/stm&#xB3C4; &#xAC00;&#xB2A5;  </p>
+</blockquote>
+<pre><code class="lang-asm">vldmias r4, {s3-s8} /* s3 &#x2190;  *r4  
+                       s4 &#x2190;  *(r4 + 4)  
+                       s5 &#x2190;  *(r4 + 8)  
+                       s6 &#x2190;  *(r4 + 12)  
+                       s7 &#x2190;  *(r4 + 16)  
+                       s8 &#x2190;  *(r4 + 20)  
+                     */  
+vldmias r4!, {s3-s8} /* Like the previous instruction  
+                        but at the end r4 &#x2190;  r4 + 24   
+                      */  
+vstmdbs r5!, {s12-s13} /*  *(r5 - 4 * 2) &#x2190;  s12  
+                           *(r5 - 4 * 1) &#x2190;  s13  
+                           r5 &#x2190;  r5 - 4*2  
+                       */
+</code></pre>
+<blockquote>
+<p>Addressing mode, as/bs  </p>
+</blockquote>
+<pre><code class="lang-asm">vpush {s0-s5} /* Equivalent to vstmdb sp!, {s0-s5} */  
+vpop {s0-s5}  /* Equivalent to vldmia sp!, {s0-s5} */
+</code></pre>
+<blockquote>
+<p>Stack Operation  </p>
+</blockquote>
+<h2 id="movements-between-registers">Movements between registers</h2>
+<p>register&#xAC04; &#xB370;&#xC774;&#xD130; &#xC774;&#xB3D9;&#xC2DC;: mov &#xBA85;&#xB839;&#xC5B4;.  </p>
+<pre><code class="lang-asm">vmov s2, s3  /* s2 &#x2190; s3 */
+</code></pre>
+<pre><code>vmov s2, r3  /* s2 &#x2190; r3 */
+</code></pre><blockquote>
+<p><code>r#</code> &#xACFC; <code>s#</code> &#xB97C; &#xD63C;&#xC6A9;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C; &#xACBD;&#xC6B0; &#xBE44;&#xD2B8;&#xB9CC; &#xBCF5;&#xC0AC;&#xB420; &#xBFD0;, data&#xAC00; &#xBCF5;&#xC0AC;&#xB418;&#xB294;&#xAC83;&#xC774; &#xC544;&#xB2D8;&#xC744; &#xC8FC;&#xC758;  </p>
+</blockquote>
+<h2 id="conversions">Conversions</h2>
+<pre><code class="lang-asm">vcvt.f64.f32 d0, s0  /* Converts s0 single-precision value   
+                        to a double-precision value and stores it in d0 */  
+
+vcvt.f32.f64 s0, d0  /* Converts d0 double-precision value   
+                        to a single-precision value  and stores it in s0 */  
+
+vmov s0, r0          /* Bit copy from integer register r0 to s0 */  
+vcvt.f32.s32 s0, s0  /* Converts s0 signed integer value   
+                        to a single-precision value and stores it in s0 */  
+
+vmov s0, r0          /* Bit copy from integer register r0 to s0 */  
+vcvt.f32.u32 s0, s0  /* Converts s0 unsigned integer value   
+                        to a single-precision value and stores in s0 */  
+
+vmov s0, r0          /* Bit copy from integer register r0 to s0 */  
+vcvt.f64.s32 d0, s0  /* Converts r0 signed integer value   
+                        to a double-precision value and stores in d0 */  
+
+vmov s0, r0          /* Bit copy from integer register r0 to s0 */  
+vcvt.f64.u32 d0, s0  /* Converts s0 unsigned integer value   
+                        to a double-precision value and stores in d0 */
+</code></pre>
+<h2 id="fpscr-&#xBCC0;&#xACBD;">fpscr &#xBCC0;&#xACBD;</h2>
+<pre><code class="lang-asm">/* Set the len field of fpscr to be 8 (bits: 111) */  
+mov r5, #7                            /* r5 &#x2190;  7. 7 is 111 in binary */  
+mov r5, r5, LSL #16                   /* r5 &#x2190;  r5 &lt;&lt; 16 */  
+vmrs r4, fpscr                        /* r4 &#x2190;  fpscr */  
+orr r4, r4, r5                        /* r4 &#x2190;  r4 | r5. Bitwise OR */  
+vmsr fpscr, r4                        /* fpscr &#x2190;  r4 */
+</code></pre>
+<blockquote>
+<p><code>vmrs</code> : fpscr&#xC744; general purpose register&#xC5D0; load&#xD558;&#xB294;&#xAC83; &#xB300;&#xC2E0;&#xC5D0; mrs &#xBA85;&#xB839;&#xC5B4; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;<br><code>vmsr</code> : register &#xC5D0;&#xC11C; &#xB2E4;&#xC2DC; fpscr&#xC5D0; &#xC804;&#xB2EC;  </p>
+</blockquote>
+<h2 id="&#xCC38;&#xACE0;-mrs-msr-&#xBA85;&#xB839;&#xC5B4;">&#xCC38;&#xACE0;: <code>mrs</code> <code>msr</code> &#xBA85;&#xB839;&#xC5B4;</h2>
+<p><code>cpsr</code> &#xB610;&#xB294; <code>spsr</code> control&#xD558;&#xB294; &#xBA85;&#xB839;&#xC5B4; (PSR &#xBA85;&#xB839;)
+CPSR&#xACFC; SPSR &#xB450;&#xAC1C;&#xC640; &#xC77C;&#xBC18; Register &#xC0AC;&#xC774;&#xB97C;&#xC5D0; &#xAC12;&#xC744; &#xC11C;&#xB85C; &#xBCF5;&#xC0AC;&#xD560; &#xC218; &#xC788;&#xB294; &#xBA85;&#xB839;&#xC5B4;&#xB4E4;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. MRS, MSR &#xB450;&#xAC1C;&#xB85C; &#xBAA8;&#xB4E0;&#xAC78; &#xCC98;&#xB9AC;&#xD55C;&#xB2E4;.  </p>
+<pre><code class="lang-asm">mrs r0, cpsr
+</code></pre>
+<blockquote>
+<p><code>r0</code>&#xC5D0; <code>cpsr</code> &#xAC12;&#xC744; &#xC77D;&#xC5B4;&#xC628;&#xB2E4;.  </p>
+</blockquote>
+<pre><code class="lang-asm">msr cpsr, r0
+</code></pre>
+<blockquote>
+<p><code>r0</code>&#xC758; &#xB0B4;&#xC6A9;&#xC744; <code>cpsr</code>&#xC5D0; &#xBCF5;&#xC0AC; &#xD55C;&#xB2E4;.  </p>
+</blockquote>
+<h2 id="function-call-convention-and-floating-point-registers">Function call convention and floating-point registers</h2>
+<p><a href="http://thinkingeek.com/2013/05/12/arm-assembler-raspberry-pi-chapter-13/" target="_blank">http://thinkingeek.com/2013/05/12/arm-assembler-raspberry-pi-chapter-13/</a> &#xC77D;&#xAE30;  </p>
+<h2 id="assembler">Assembler</h2>
+<p>Make sure you pass the flag <code>-mfpu=vfpv2</code> to as, otherwise it will not recognize the VFPv2 instructions.  </p>
+<h2 id="&#xCC38;&#xACE0;">&#xCC38;&#xACE0;</h2>
+<p><a href="http://infocenter.arm.com/help/topic/com.arm.doc.qrc0007e/QRC0007_VFP.pdf" target="_blank">quick reference card of VFP</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="12-Loops-and-the-status-register.html" class="navigation navigation-prev " aria-label="Previous page: 12. Loops and the status register">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="14-Matrix-multiply.html" class="navigation navigation-next " aria-label="Next page: 14. Matrix multiply">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"13. Floating point numbers","level":"2.13","depth":1,"next":{"title":"14. Matrix multiply","level":"2.14","depth":1,"path":"markdowns/14-Matrix-multiply.md","ref":"markdowns/14-Matrix-multiply.md","articles":[]},"previous":{"title":"12. Loops and the status register","level":"2.12","depth":1,"path":"markdowns/12-Loops-and-the-status-register.md","ref":"markdowns/12-Loops-and-the-status-register.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/assembly"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/assembly"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":"UA-145404461-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/assembly/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/13-Floating-point-numbers.md","mtime":"2019-08-15T13:32:28.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-15T13:43:20.638Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
