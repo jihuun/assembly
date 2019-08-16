@@ -2,6 +2,9 @@
 # 13. Floating point numbers  
 ----
   
+  
+<!-- toc -->
+
 from the IEEE754   
 ```
 sign(부호) | exponent(지수) | mentissa(가수)

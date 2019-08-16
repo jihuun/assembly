@@ -2,6 +2,7 @@
 # 10. Functions-2 The stack  
 ----
   
+<!-- toc -->
   
   
   

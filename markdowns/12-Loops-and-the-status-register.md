@@ -2,6 +2,8 @@
 # 12. Loops and the status register  
 ----
   
+<!-- toc -->
+
 ## 접미사 `-s` -> CPSR update  
   
 지금까지 나온 예제에선 `cmp` 만 `CPSR`을 update하는 명령어였다. 기본 명령어는 `CPSR`을 update하지 않는다. 반면 접미사 `-s`를 붙이면 `CPSR`을 update한다.  

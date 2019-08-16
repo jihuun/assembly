@@ -1,6 +1,9 @@
 
 # 21. Subword data  
 ----
+  
+<!-- toc -->
+
 
 sub-word 즉, word interger 32bit size보다 작은 데이터를 사용하려면 어떻게 해야하나?  
 

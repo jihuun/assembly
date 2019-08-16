@@ -1,6 +1,8 @@
 # 1. Introduction
 ----
 
+<!-- toc -->
+
 ## The basic code structure
 
 ARM assembly 소스코드의 기본적인 형태는 다음과 같다. 아래와 같은 식으로 모든 예제코드에는 주석이 있는데, 라인별 주석을 반드시 읽는것을 추천한다. 다음 예제 코드는 return 2 를 하는 단순한 C main 함수의 Assembly 버전이다.  

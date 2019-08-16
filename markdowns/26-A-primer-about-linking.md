@@ -2,6 +2,9 @@
 # 26. A primer about linking
 ----
 
+  
+<!-- toc -->
+
 `NOTE`: #26, #27장에 걸쳐 소개되는 Linking 은 온전히 이해하지 못한부분이 많다. 앞으로도 관심갖고 지속적으로 수정 보완 할 예정.  
 
 ## GCC 와 Keil assembler 비교

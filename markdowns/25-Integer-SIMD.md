@@ -2,6 +2,9 @@
 # 25. Integer SIMD
 ----
 
+  
+<!-- toc -->
+
 13장에서 VFPv2 와 floating point number를 vector operation 할 수 있음을 확인했다. integer number도 벡터연산이 가능한가? 이장에서는 그것을 확인한다.  
 
 ## SIMD

@@ -535,6 +535,20 @@
                                 
                                 <h1 id="13-floating-point-numbers">13. Floating point numbers</h1>
 <hr>
+<!-- toc -->
+<ul>
+<li><a href="#vfpv2-registers-s0--s31-d0--d15">VFPv2 Registers: <code>s0</code> ~ <code>s31</code>, <code>d0</code> ~ <code>d15</code></a></li>
+<li><a href="#arithmetic-operations">Arithmetic operations</a></li>
+<li><a href="#load-and-store">Load and store</a></li>
+<li><a href="#movements-between-registers">Movements between registers</a></li>
+<li><a href="#conversions">Conversions</a></li>
+<li><a href="#fpscr-%EB%B3%80%EA%B2%BD">fpscr &#xBCC0;&#xACBD;</a></li>
+<li><a href="#%EC%B0%B8%EA%B3%A0-mrs-msr-%EB%AA%85%EB%A0%B9%EC%96%B4">&#xCC38;&#xACE0;: <code>mrs</code> <code>msr</code> &#xBA85;&#xB839;&#xC5B4;</a></li>
+<li><a href="#function-call-convention-and-floating-point-registers">Function call convention and floating-point registers</a></li>
+<li><a href="#assembler">Assembler</a></li>
+<li><a href="#%EC%B0%B8%EA%B3%A0">&#xCC38;&#xACE0;</a></li>
+</ul>
+<!-- tocstop -->
 <p>from the IEEE754   </p>
 <pre><code>sign(&#xBD80;&#xD638;) | exponent(&#xC9C0;&#xC218;) | mentissa(&#xAC00;&#xC218;)
 </code></pre><p>(&#xAC00;&#xC218;)x2^(&#xC9C0;&#xC218;)  </p>
@@ -719,7 +733,7 @@ CPSR&#xACFC; SPSR &#xB450;&#xAC1C;&#xC640; &#xC77C;&#xBC18; Register &#xC0AC;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"13. Floating point numbers","level":"2.13","depth":1,"next":{"title":"14. Matrix multiply","level":"2.14","depth":1,"path":"markdowns/14-Matrix-multiply.md","ref":"markdowns/14-Matrix-multiply.md","articles":[]},"previous":{"title":"12. Loops and the status register","level":"2.12","depth":1,"path":"markdowns/12-Loops-and-the-status-register.md","ref":"markdowns/12-Loops-and-the-status-register.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/assembly"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/assembly"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":"UA-145847458-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/assembly/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/13-Floating-point-numbers.md","mtime":"2019-08-15T13:32:28.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T11:29:56.608Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"13. Floating point numbers","level":"2.13","depth":1,"next":{"title":"14. Matrix multiply","level":"2.14","depth":1,"path":"markdowns/14-Matrix-multiply.md","ref":"markdowns/14-Matrix-multiply.md","articles":[]},"previous":{"title":"12. Loops and the status register","level":"2.12","depth":1,"path":"markdowns/12-Loops-and-the-status-register.md","ref":"markdowns/12-Loops-and-the-status-register.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"http://soopsaram.com/assembly"},"plugins":["ga","simple-page-toc","disqus","back-to-top-button","edit-link","github","livereload"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"jihuun"},"github":{"url":"https://github.com/jihuun/assembly"},"livereload":{},"simple-page-toc":{"maxDepth":2,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":"UA-145847458-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit","base":"https://github.com/jihuun/assembly/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdowns/13-Floating-point-numbers.md","mtime":"2019-08-16T11:39:44.323Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-16T11:42:38.064Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

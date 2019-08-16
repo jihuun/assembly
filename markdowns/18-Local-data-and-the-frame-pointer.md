@@ -2,6 +2,9 @@
 # 18. Local data and the frame pointer  
 ----
 
+  
+<!-- toc -->
+
 ## Local Data
 
 지금까지는 program existance 에 종속된 global 변수만 사용했다. 이번 장 에서는 memory existence 에 종속된 local 변수를 사용할 수 있는 방법에 대해 알아본다. Stack이 그 역할을 한다. Stack은 함수와 lifetime을 같이하는 [Dynamic Activation](10. Functions-2 The stack) 메모리 영역을 이용할 수 있게 한다. 그래서 함수 내에서만 사용하는 local data 를 사용할 수 있다.   

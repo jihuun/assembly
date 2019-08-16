@@ -2,6 +2,9 @@
 # 16. Switch control structure  
 ----
 
+  
+<!-- toc -->
+
 6장, 12장에서 if/else/for/while/.. 등의 몇 control structure를 살펴봤다. 이번장에서는 switch/case 가 어떻게 assembly 코드로 구현될 수 있는지 알아본다. 
 
 먼저 C 언어의 switch 문.   

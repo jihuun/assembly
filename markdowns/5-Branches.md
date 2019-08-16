@@ -2,6 +2,9 @@
 # 5. Branches
 ----
 
+  
+<!-- toc -->
+
 
 ## r15, a PC register
 

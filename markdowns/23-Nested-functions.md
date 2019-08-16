@@ -1,6 +1,9 @@
 
 # 23. Nested functions
 ----
+  
+<!-- toc -->
+
 
 Nested function 은 함수 내부에 정의된 함수이다. 함수 내부에서만 사용가능하다. 마치 로컬변수 처럼 lifetime이 함수와 동일하다.  
 

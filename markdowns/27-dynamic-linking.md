@@ -2,6 +2,9 @@
 # 27. dynamic-linking  
 ----
 
+  
+<!-- toc -->
+
 dynamic-linking이란?  프로그램이 수행중(run)인 상태에서 obj Linking 하는것.  
 
 

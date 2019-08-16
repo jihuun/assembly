@@ -2,6 +2,9 @@
 # 24. Trampolines
 ----
 
+  
+<!-- toc -->
+
 
 이 장에서도 계속해서 Nested Function에 대해 설명한다.  
 

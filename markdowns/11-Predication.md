@@ -2,6 +2,8 @@
 # 11. Predication  
 ----
 
+<!-- toc -->
+
 `NOTE` Prediction 아님 Predic__a__tion임 주의 (Not to be confused with branch prediction.)
 
 가용 자원이 부족한 임베디드 시스템에서는 코드 사이즈를 줄일 필요가 있는데 이때 Predication을 사용하면 좋다.  

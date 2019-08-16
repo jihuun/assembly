@@ -1,6 +1,9 @@
 
 # 8. Arrays and structures
 ----
+  
+<!-- toc -->
+
 
 이번 장에서는 Indexing mode for load and store 에 대해 알아본다.  
 괄호 [r#] 는 r# 이 저장된 주소값을 의미한다.

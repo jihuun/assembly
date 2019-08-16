@@ -1,6 +1,9 @@
 
 # 22. The Thumb instruction set  
 ----
+  
+<!-- toc -->
+
 
 ARM사는 16 bit bus line을 가진 Memory에서도 효율적으로 사용할 수 있도록 ARM 명령어들을 16 bit로 압축한 명령어 set을 발표했    다.  
 Memory자원이 부족한 임베디드 시스템에서 유용한 명령어. 
