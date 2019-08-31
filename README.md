@@ -1,7 +1,8 @@
 # Learning Assembly Language with ARM
 
-> 작성: 김지훈 (jihuun.k@gmail.com)
-> 2018-07 작성
+[![Build Status](https://travis-ci.org/jihuun/assembly.svg?branch=master)](https://travis-ci.org/jihuun/assembly)  
+
+> 2018-07 김지훈 씀 (jihuun.k@gmail.com)
 
 이 문서는 ARM Assembly 명령어를 쉽게 배울 수 있도록 설명한 튜토리얼이다. Assembly언어를 전혀 몰라도 충분히 읽을 수 있는 Beginner용으로, 32bit ARMv6 Architecture 기반의 Assembly 언어를 매우 익힐 수있다. 또한 Architecture를 떠나서 일반적인 Assembly Language 의 개념을 익힐 수 있다. 시중에는 많은 ARM assembly 언어 참고자료가 있지만 이 튜토리얼 만큼 초보자가 체계적으로 쉽게 익힐 수 있는 컨텐츠는 본적이 없었던것 같다. 참고로, 튜토리얼은 Raspberry PI 2를 Target machine으로 두고 작성되었지만 내용과는 크게 상관이 없어서 해당 machine이 없어도 무방하다.   
 
